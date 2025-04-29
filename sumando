@@ -3,7 +3,10 @@
 <TITLE> ChemaDeHuevo </TITLE>
 </HEAD>
 <BODY>
-<H1> <CENTER> <style="color:MediumSeaGreen;"> BIENVENIDO PENDEJO </CENTER> </H1>
+<H1 style="color:MediumSeaGreen;"> <CENTER>  BIENVENIDO PENDEJO </CENTER> </H1>
+<BR>
+<BODY BACKGROUND="https://img.freepik.com/foto-gratis/textura-o-fondo-pared-yeso-calido_1194-602031.jpg?semt=ais_hybrid&w=740">
+<BR>
 <a href="https://github.com/chemadehuevo/Descubre-la-programacion/blob/main/Game%20of%20Burguer">THE GAME OF BURGER</a>
 <BR>
 <a href="https://descubre.inf.um.es/editor-codigo.php">Descubre la programación</a>
