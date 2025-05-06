@@ -1,208 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>ChemaDeHuevo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(120deg, #e0c3fc, #8ec5fc);
-      animation: fadeIn 1.2s ease-in;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <title>ChemaDeHuevo</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Cabecera */
+        header {
+            background-color: MediumSeaGreen;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+        }
+        header img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            font-style: italic;
+            margin: 10px 0;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        /* Sección principal */
+        main {
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+        h2 {
+            color: Tomato;
+            margin-bottom: 20px;
+        }
 
-    header {
-      background: linear-gradient(to right, #2e8b57, #3cb371);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+        /* Enlaces */
+        .links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .links a:hover {
+            background-color: MediumSeaGreen;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
-    header img {
-      width: 100px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid white;
-    }
+        /* Tabla de trabajos */
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+        td a {
+            color: MediumSeaGreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        td a:hover {
+            color: Tomato;
+            text-decoration: underline;
+        }
 
-    h1 {
-      font-size: 36px;
-      margin: 10px 0 5px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin: 0;
-      font-style: italic;
-    }
-
-    .intro-buttons {
-      margin-top: 30px;
-    }
-
-    .intro-buttons a {
-      background-color: white;
-      color: #2e8b57;
-      padding: 12px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .intro-buttons a:hover {
-      background-color: #2e8b57;
-      color: white;
-    }
-
-    nav {
-      background-color: #ffffffcc;
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #2e8b57;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 28px;
-      margin: 60px 0 20px;
-      color: #333;
-    }
-
-    .cards {
-      max-width: 900px;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      width: 280px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      text-align: center;
-      position: relative;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card h3 {
-      margin-bottom: 15px;
-      color: #2e8b57;
-      font-size: 22px;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
-    .card a {
-      text-decoration: none;
-      background-color: #2e8b57;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      display: inline-block;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .card a:hover {
-      background-color: #256d46;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #f1f1f1;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 14px;
-    }
-  </style>
+        /* Pie de página */
+        footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="avatar">
+        <h1>Bienvenido a ChemaDeHuevo</h1>
+        <p>Trabajo realizado con ayuda de Mario Chamba</p>
+    </header>
 
-  <!-- Inicio -->
-  <header id="inicio">
-    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="avatar">
-    <h1>Bienvenido a ChemaDeHuevo</h1>
-    <p>Proyecto final realizado con ayuda de Mario Chamba y ChatGPT</p>
-    <div class="intro-buttons">
-      <a href="#programacion">Descubre la programación</a>
-      <a href="#tinkercad">Explora Tinkercad</a>
-    </div>
-  </header>
+    <main>
+        <div class="links">
+            <a href="https://github.com/chemadehuevo/Descubre-la-programacion/blob/main/Game%20of%20Burguer">🍔 THE GAME OF BURGER</a>
+            <a href="https://descubre.inf.um.es/editor-codigo.php">💻 Descubre la programación</a>
+        </div>
 
-  <!-- Navegación -->
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#programacion">Descubre la programación</a>
-    <a href="#tinkercad">Tinkercad</a>
-  </nav>
+        <h2>Trabajos en Tinkercad</h2>
 
-  <!-- Descubre la programación -->
-  <section id="programacion">
-    <div class="section-title">🔗 Descubre la programación</div>
-    <div class="cards">
-      <div class="card">
-        <h3>Recursos de programación</h3>
-        <p>Proyectos interactivos como Game of Burger y un editor online para probar tu código.</p>
-        <a href="https://github.com/chemadehuevo/Descubre-la-programacion/blob/main/Game%20of%20Burguer" target="_blank">Ir a Game of Burger</a><br><br>
-        <a href="https://descubre.inf.um.es/editor-codigo.php" target="_blank">Probar el editor</a>
-      </div>
-    </div>
-  </section>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nombre</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Semáforo solo</td>
+                    <td><a href="https://www.tinkercad.com/things/01OG5QRBpiu-semaforo-solo">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Peatón y coche</td>
+                    <td><a href="https://www.tinkercad.com/things/iNBCp8WIeG4-peaton-y-coche">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Rueda e iluminación</td>
+                    <td><a href="https://www.tinkercad.com/things/eaOmCmwOtu3-rueda-e-iluminacion">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Robo UUSAM</td>
+                    <td><a href="https://www.tinkercad.com/things/fSGyQukxC9S-neat-uusam-robo">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Sensor de luz</td>
+                    <td><a href="https://www.tinkercad.com/things/dIT1fLjTS89-sensor-de-luz-chema-de-huevo">Ver</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
-  <!-- Tinkercad -->
-  <section id="tinkercad">
-    <div class="section-title">🛠️ Proyectos en Tinkercad</div>
-    <div class="cards">
-      <div class="card">
-        <h3>Mis proyectos electrónicos</h3>
-        <p>Desde semáforos inteligentes hasta sensores de luz. ¡Explora mis creaciones en Tinkercad!</p>
-        <a href="https://www.tinkercad.com/things/01OG5QRBpiu-semaforo-solo" target="_blank">Ver todos los trabajos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 ChemaDeHuevo. Todos los derechos reservados.
-  </footer>
-
+    <footer>
+        © 2025 ChemaDeHuevo. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
+
