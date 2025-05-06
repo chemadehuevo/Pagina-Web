@@ -1,25 +1,140 @@
-<HTML>
-<HEAD>
-<TITLE> ChemaDeHuevo </TITLE>
-</HEAD>
-<BODY>
-<H1 style="color:MediumSeaGreen;"> <CENTER>  BIENVENIDO PENDEJO </CENTER> </H1>
-<BR>
-<H3 style="color:Tomato;"> <CENTER> Trabajo 5 realizado con ayuda de Mario Chamba </CENTER> </H3>
-<BODY BACKGROUND="https://img.freepik.com/foto-gratis/textura-o-fondo-pared-yeso-calido_1194-602031.jpg?semt=ais_hybrid&w=740">
-<BR>
-<a href="https://github.com/chemadehuevo/Descubre-la-programacion/blob/main/Game%20of%20Burguer"> <CENTER> THE GAME OF BURGER </CENTER> </a>
-<BR>
-<a href="https://descubre.inf.um.es/editor-codigo.php"> <CENTER >Descubre la programación </CENTER> </a>
-<BR>
-<a href="https://www.tinkercad.com/things/01OG5QRBpiu-semaforo-solo"> <CENTER> TinkerCard: Trabajo 1 </CENTER> </a>
-<BR>
-<a href="https://www.tinkercad.com/things/iNBCp8WIeG4-peaton-y-coche"> <CENTER> TinkerCard: Trabajo 2 </CENTER> </a>
-<BR>
-<a href="https://www.tinkercad.com/things/eaOmCmwOtu3-rueda-e-iluminacion"> <CENTER> TinkerCard: Trabajo 3 </CENTER> </a>
-<BR>
-<a href="https://www.tinkercad.com/things/fSGyQukxC9S-neat-uusam-robo"> <CENTER> TinkerCard: Trabajo 4 </CENTER> </a>
-<BR>
-<a href="https://www.tinkercad.com/things/dIT1fLjTS89-sensor-de-luz-chema-de-huevo"> <CENTER> TinkerCard: Trabajo 5 </CENTER> </a> 
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ChemaDeHuevo</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: MediumSeaGreen;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: Tomato;
+            text-align: center;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: MediumSeaGreen;
+            text-decoration: underline;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="avatar">
+        <h1>Bienvenido a ChemaDeHuevo</h1>
+        <p>Trabajo realizado con ayuda de Mario Chamba</p>
+    </header>
+
+    <main>
+        <div class="links">
+            <a href="https://github.com/chemadehuevo/Descubre-la-programacion/blob/main/Game%20of%20Burguer">🍔 THE GAME OF BURGER</a>
+            <a href="https://descubre.inf.um.es/editor-codigo.php">💻 Descubre la programación</a>
+        </div>
+
+        <h2>Trabajos en Tinkercad</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Nombre</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Semáforo solo</td>
+                    <td><a href="https://www.tinkercad.com/things/01OG5QRBpiu-semaforo-solo">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Peatón y coche</td>
+                    <td><a href="https://www.tinkercad.com/things/iNBCp8WIeG4-peaton-y-coche">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Rueda e iluminación</td>
+                    <td><a href="https://www.tinkercad.com/things/eaOmCmwOtu3-rueda-e-iluminacion">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Robo UUSAM</td>
+                    <td><a href="https://www.tinkercad.com/things/fSGyQukxC9S-neat-uusam-robo">Ver</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Sensor de luz</td>
+                    <td><a href="https://www.tinkercad.com/things/dIT1fLjTS89-sensor-de-luz-chema-de-huevo">Ver</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        © 2025 ChemaDeHuevo. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
